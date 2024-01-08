@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Nesting conditional statements</title>
 </head>
+
 <body>
 
 
@@ -14,16 +16,33 @@
     // Nesting if/else
     // ==================
 
-    var hungry = true;
+    var hungry = false;
+    var craving = 'pizza';
 
-    if(hungry) {
-      alert('Get some food!!!')
+    if (hungry && craving == 'pizza') {
+      alert('Gimme pizza!')
     } else {
+      alert("Maybe later...");
+    }
+
+    if (!hungry) {
       alert('Maybe later...');
     }
+    // if (hungry) {
+    //   if (craving == 'Pizza') {
+    //     alert('Gimme pizza!');
+    //   } else if (craving == 'chinese') {
+    //     alert('Gimme chinese!')
+    //   } else {
+    //     alert("Let's get some food!");
+    //   }
+    // } else {
+    //   alert("Maybe later...");
+    // }
 
 
   </script>
-  
+
 </body>
+
 </html>
