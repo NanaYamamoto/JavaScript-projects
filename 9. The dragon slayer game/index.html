@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>The dragon slayer game</title>
 </head>
+
 <body>
 
   <script>
+    var random = Math.ceil(Math.random() * 100);
 
+    var name = prompt('What is your name?');
+    var play = confirm('Hello ' + name + ', Would you like to play?');
+
+    if (play) {
+      var start = confirm('Would you like to battle the dragon?');
+      if (start) {
+        var result = random > 50 ? 'You defeated the dragon!' : 'You lost...';
+        alert(result);
+      } else {
+        alert('Come back when you are brave enogugh!');
+      }
+    } else {
+      alert('What a shame!');
+    }
 
   </script>
-  
+
 </body>
+
 </html>
