@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>DOM Manipulation</title>
 </head>
+
 <body>
 
+  <p class="hello">hello, <user id="userName">user</span></p>
+  <p class="hello">Welcome back!</p>
+  <img class="image" src="" alt="">
+  <img class="image" src="" alt="">
 
   <script>
+    //getElementById
+    var name = 'Chris';
+    document.getElementById('userName').innerHTML = name;
+    document.getElementById('userName').style.fontSize = '24px';
+
+    //getElementByClassName
+    var test = document.getElementsByClassName('hello')[1];
+    test.style.color = 'purple';
+
+    //getElemtntByTagName
+    document.getElementsByTagName('p')[0].innerHTML = 'changed';
+
+    //querySelecter
+    document.querySelector('.image').setAttribute('src', 'image.jpg');
+
+    //quwrySelecterAll
+    document.querySelectorAll('.image')[0].setAttribute('src', 'image.jpg');
+    document.querySelectorAll('.image')[1].setAttribute('src', 'image.jpg');
 
   </script>
-  
+
 </body>
+
 </html>
