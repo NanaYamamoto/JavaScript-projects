@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Adding and removing elements with Javascript</title>
 </head>
+
 <body>
 
   <ul id="list">
@@ -14,8 +16,36 @@
   </ul>
 
   <script>
+    //document.write('Hello yall');
+
+    //create element
+    var listItem = document.createElement('li');
+
+    //create text node
+    var itemText = document.createTextNode('Bananas');
+
+    //add text to list
+    listItem.appendChild(itemText);
+
+    //select parent list
+    var list = document.getElementById('list');
+
+    //add  new list item to list
+    list.appendChild(listItem);
+
+    //create new grape list
+    var newListItem = document.createElement('li');
+    var newItemText = document.createTextNode('Grape');
+    newListItem.appendChild(newItemText);
+
+    var itemToReplace = document.querySelectorAll('li')[1];
+    list.replaceChild(newListItem, itemToReplace);
+
+    //remove item
+    list.removeChild(newListItem);
 
   </script>
-  
+
 </body>
+
 </html>
