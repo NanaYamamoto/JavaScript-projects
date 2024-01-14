@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Time to practice: Adding elements with Javascript</title>
 </head>
+
 <body>
 
   <main>
@@ -16,9 +18,21 @@
   </main>
 
   <script>
+    //listの作成
+    var newItem = document.createElement('p');
+    var newText = document.createTextNode('Hello, My name is Chris');
+    newItem.appendChild(newText);
+    //ドキュメントに＜p＞を追加
+    document.body.appendChild(newItem);
+
+    //imgの作成
+    var newImgItem = document.createElement('img');
+    newImgItem.src = 'image.jpg';  //image path
+    document.body.appendChild(newImgItem);
 
 
   </script>
-  
+
 </body>
+
 </html>
