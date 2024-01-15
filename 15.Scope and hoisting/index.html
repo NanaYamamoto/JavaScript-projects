@@ -13,21 +13,16 @@
   <p id="text"></p>
 
   <script>
-    // anonymousFunction();
+    anonymousFunction();
 
-    // var anonymousFunction = function () {
-    //   var num1 = 10;
-    //   var num2 = 12;
-    //   document.getElementById('text').innerHTML = num1 * num2;
-    //   console.log(num1);
-    // }
-
-    //ES6 arrow function
-    var anonymousFunction = num1 => {
-      document.getElementById('text').innerHTML = num1;
+    var anonymousFunction = function () {
+      var num1 = 10;
+      var num2 = 12;
+      document.getElementById('text').innerHTML = num1 * num2;
+      console.log(num1);
     }
 
-    anonymousFunction(11);
+
 
 
   </script>
