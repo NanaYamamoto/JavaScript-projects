@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Javascript events</title>
 </head>
+
 <body>
 
-  <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores unde dolore at perspiciatis, id soluta veniam illum libero earum. Minima autem mollitia dolores, similique officia impedit magnam cum accusamus corrupti?</p>
+  <p id="text">Lorem ipsum dolor sit amet consectetur
+    adipisicing elit. Dolores unde
+    dolore
+    at
+    perspiciatis, id soluta
+    veniam illum libero earum. Minima autem mollitia dolores, similique officia impedit magnam cum accusamus corrupti?
+  </p>
 
   <script>
+    //p要素を取得
+    var textElemnt = document.querySelector('p');
+    //pがクリックされたとき文字を大きくするイベント
+    //名前のないfunction
+    // textElemnt.addEventListener('click', function () {
+    //   document.getElementById('text').style.fontSize = '34px';
+    // })
 
+    //名前のあるfuntion
     var changeFontSize = () => {
       document.getElementById('text').style.fontSize = '34px';
     }
 
-    changeFontSize();
+    textElemnt.addEventListener('click', changeFontSize);
+    //changefontSize()　にするとイベントを待たずにファンクションが作動する
 
   </script>
-  
+
 </body>
+
 </html>
