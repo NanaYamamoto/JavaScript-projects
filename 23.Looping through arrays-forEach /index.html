@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Looping through arrays: forEach</title>
 </head>
+
 <body>
 
   <div id="animals"></div>
 
   <script>
-    
+
     var animals = ['cat', 'dog', 'tiger', 'giraffe', 'lion'];
-    
+
+    // var upperCaseNames = []
+    // for (let i = 0; i < animals.length; i++) {
+    //   upperCaseNames.push(animals[i].toUpperCase());
+    // }
+
+    var upperCaseNames = [];
+    animals.forEach(function (animal) {
+      upperCaseNames.push(animal.toUpperCase());
+    });
+
+    document.getElementById('animals').innerHTML = upperCaseNames;
   </script>
 </body>
+
 </html>
