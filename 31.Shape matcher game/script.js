@@ -16,30 +16,23 @@ const shapes = [
     { color: 'green', width: 440, height: 160 }
 ]
 
-
-const showColor = () => {
-    const selectRandomShape = () => {
-        const randomNum = Math.floor(Math.random() * shapes.length);
-        const randomShape = shapes[randomNum];
-        return randomShape;
-    }
-    shape1 = selectRandomShape();
-    shape2 = selectRandomShape();
-
-    document.getElementById('shape1').style.background = shape1.color;
-    document.getElementById('shape1').style.width = shape1.width;
-    document.getElementById('shape1').style.height = shape1.height;
-
-    document.getElementById('shape2').style = shape2;
-
-
+//ランダムなshapeを選ぶ
+const selectRandomShape = () => {
+    const randomNum = Math.floor(Math.random() * shapes.length);
+    const randomShape = shapes[randomNum];
+    return randomShape;
 }
-setInterval(showColor, 1000);
+
+//shapeを毎秒ごとに変える
+const repeatRandomShape = () => {
+    setInterval(() => {
+        shape1 = selectRandomShape();
+        shape2 = selectRandomShape();
+    }, 1000);
+}
+
+document.getElementById('play').addEventListener('click', repeatRandomShape);
 
 
-// var play = () => {
-//     document.getElementById('score').innerHTML = 'start!';
-// }
 
-// document.getElementById('play').addEventListener('click', play);
 
